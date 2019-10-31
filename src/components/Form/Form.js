@@ -5,7 +5,7 @@ import { FormWrapper, ContactForm } from './Form.styles';
 const Form = ({ id }) => {
   return (
     <FormWrapper id={id}>
-      <ContactForm name="contact" method="POST" data-netlify="true">
+      <ContactForm name="contact" method="POST">
         <h1>Contact Us </h1>
         <input type="hidden" name="contact" value="contact" />
         <label htmlFor="name">Name</label>
