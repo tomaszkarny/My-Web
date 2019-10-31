@@ -7,7 +7,7 @@ const Form = ({ id }) => {
     <FormWrapper id={id}>
       <ContactForm name="contact" method="POST">
         <h1>Contact Us </h1>
-        <input type="hidden" name="contact" value="contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <label htmlFor="name">Name</label>
         <input type="text" name="name" />
 
