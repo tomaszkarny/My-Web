@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionWrapper } from './Description.styles';
 
-const Description = ({ dark, title, text, first, second, third, id }) => {
+const Description = ({ dark, title, text, first, second, third, id }, ref) => {
   return (
     <SectionWrapper
       dark={dark}
@@ -9,6 +9,7 @@ const Description = ({ dark, title, text, first, second, third, id }) => {
       second={second}
       third={third}
       id={id}
+      ref={ref}
     >
       <h1>{title}</h1>
       <p>{text}</p>
@@ -16,4 +17,6 @@ const Description = ({ dark, title, text, first, second, third, id }) => {
   );
 };
 
-export default Description;
+const ForwaredDescription = React.forwardRef(Description);
+
+export default ForwaredDescription;

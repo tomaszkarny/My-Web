@@ -4,9 +4,9 @@ import { ListWrapper, Wrapper } from './List.styles';
 import { listData } from './listData';
 import ListItem from './ListItem';
 
-const List = () => {
+const List = (props, ref) => {
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <h1>Our services</h1>
       <ListWrapper>
         {listData.map((data, idx) => (
@@ -17,4 +17,6 @@ const List = () => {
   );
 };
 
-export default List;
+const ForwaredList = React.forwardRef(List);
+
+export default ForwaredList;

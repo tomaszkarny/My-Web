@@ -4,7 +4,14 @@ import { StyledNav, Logo } from './ResponsiveNavigation.styles';
 
 import Burger from '../Burger/Burger';
 
-const ResponsiveNavigation = ({ open, setOpen }) => {
+const ResponsiveNavigation = ({
+  open,
+  setOpen,
+  aboutRect,
+  listRect,
+  jobsRect,
+  contactRect,
+}) => {
   return (
     <StyledNav>
       <nav>
@@ -15,19 +22,59 @@ const ResponsiveNavigation = ({ open, setOpen }) => {
           <Burger open={open} setOpen={setOpen} />
 
           <li>
-            <a href="#home">Home</a>
+            <a href="#home">Home </a>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <a
+              href="#about"
+              onClick={() =>
+                window.scrollTo({
+                  top: aboutRect.top,
+                  behavior: 'smooth',
+                })
+              }
+            >
+              About Us
+            </a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a
+              href="#services"
+              onClick={() =>
+                window.scrollTo({
+                  top: listRect.top,
+                  behavior: 'smooth',
+                })
+              }
+            >
+              Services
+            </a>
           </li>
           <li>
-            <a href="#jobs">Jobs</a>
+            <a
+              href="#services"
+              onClick={() =>
+                window.scrollTo({
+                  top: jobsRect.top,
+                  behavior: 'smooth',
+                })
+              }
+            >
+              Jobs
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact Us</a>
+            <a
+              href="#contact"
+              onClick={() =>
+                window.scrollTo({
+                  top: contactRect.top,
+                  behavior: 'smooth',
+                })
+              }
+            >
+              Contact Us
+            </a>
           </li>
         </ul>
       </nav>

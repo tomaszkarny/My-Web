@@ -1,15 +1,15 @@
 import React, { useState, useRef } from 'react';
-import { useOnClickOutside } from '../../constants/hooks';
+import { useOnClickOutside, useClientRect } from '../../constants/hooks';
 
 import ResponsiveNavigation from '../ResponsiveNavigation/ResponsiveNavigation';
 import Header from '../Header/Header';
-import Description from '../Description/Description';
+import ForwaredDescription from '../Description/Description';
 import { descriptionData } from '../Description/descriptionData';
 import Image from '../Image/Image';
 import { imageData } from '../Image/imageData';
 import TimeLine from '../TimeLine/TimeLine';
-import List from '../List/List';
-import Form from '../Form/Form';
+import ForwaredList from '../List/List';
+import ForwaredForm from '../Form/Form';
 import Map from '../Map/Map';
 
 import { Global } from '@emotion/core';
@@ -21,38 +21,52 @@ const App = () => {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
 
+  const [aboutRect, aboutRef] = useClientRect();
+  const [listRect, listRef] = useClientRect();
+  const [jobsRect, jobsRef] = useClientRect();
+  const [contactRect, contactRef] = useClientRect();
+  console.log(contactRect);
+  console.log(contactRef);
+
   return (
     <div>
       <Global styles={globalStyles} />
 
       <AppWrapper>
         <NavWrapper ref={node}>
-          <ResponsiveNavigation open={open} setOpen={setOpen} />
+          <ResponsiveNavigation
+            open={open}
+            setOpen={setOpen}
+            aboutRect={aboutRect}
+            listRect={listRect}
+            jobsRect={jobsRect}
+            contactRect={contactRect}
+          />
         </NavWrapper>
         <Header />
-        <Description
+        <ForwaredDescription
           dark
           text={descriptionData[0].text}
           title={descriptionData[0].title}
           first
-          id="About"
+          ref={aboutRef}
         />
         <Image image={imageData[0].image} alt={imageData[0].alt} first />
         <TimeLine />
-        <Description
+        <ForwaredDescription
           text={descriptionData[1].text}
           title={descriptionData[1].title}
         />
-        <List id="Services" />
+        <ForwaredList ref={listRef} />
         <Image image={imageData[1].image} alt={imageData[1].alt} />
-        <Description
+        <ForwaredDescription
           dark
           text={descriptionData[2].text}
           title={descriptionData[2].title}
-          id="Jobs"
           third
+          ref={jobsRef}
         />
-        <Form id="Contact" />
+        <ForwaredForm ref={contactRef} />
 
         <Map
           isMarkerShown={true}

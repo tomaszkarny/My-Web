@@ -2,9 +2,9 @@ import React from 'react';
 
 import { FormWrapper, ContactForm } from './Form.styles';
 
-const Form = ({ id }) => {
+const Form = ({ id }, ref) => {
   return (
-    <FormWrapper id={id}>
+    <FormWrapper id={id} ref={ref}>
       <ContactForm name="contact" method="POST">
         <h1>Contact Us </h1>
         <input type="hidden" name="form-name" value="contact" />
@@ -23,4 +23,6 @@ const Form = ({ id }) => {
   );
 };
 
-export default Form;
+const ForwaredForm = React.forwardRef(Form);
+
+export default ForwaredForm;
