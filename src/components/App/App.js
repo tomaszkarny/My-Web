@@ -25,9 +25,6 @@ const App = () => {
   const [listRect, listRef] = useClientRect();
   const [jobsRect, jobsRef] = useClientRect();
   const [contactRect, contactRef] = useClientRect();
-  console.log(contactRect);
-  console.log(contactRef);
-
   return (
     <div>
       <Global styles={globalStyles} />
