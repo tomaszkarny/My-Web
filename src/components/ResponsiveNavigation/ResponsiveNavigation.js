@@ -21,10 +21,10 @@ const ResponsiveNavigation = ({
           </Logo>
           <Burger open={open} setOpen={setOpen} />
 
-          <li>
+          <li onClick={() => setOpen(!open)}>
             <a href="#home">Home </a>
           </li>
-          <li>
+          <li onClick={() => setOpen(!open)}>
             <a
               href="#about"
               onClick={() =>
@@ -37,7 +37,7 @@ const ResponsiveNavigation = ({
               About Us
             </a>
           </li>
-          <li>
+          <li onClick={() => setOpen(!open)}>
             <a
               href="#services"
               onClick={() =>
@@ -50,7 +50,7 @@ const ResponsiveNavigation = ({
               Services
             </a>
           </li>
-          <li>
+          <li onClick={() => setOpen(!open)}>
             <a
               href="#services"
               onClick={() =>
@@ -63,7 +63,7 @@ const ResponsiveNavigation = ({
               Jobs
             </a>
           </li>
-          <li>
+          <li onClick={() => setOpen(!open)}>
             <a
               href="#contact"
               onClick={() =>
