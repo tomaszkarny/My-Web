@@ -25,6 +25,7 @@ const App = () => {
   const [listRect, listRef] = useClientRect();
   const [jobsRect, jobsRef] = useClientRect();
   const [contactRect, contactRef] = useClientRect();
+  const [homeRect, homeRef] = useClientRect();
   return (
     <div>
       <Global styles={globalStyles} />
@@ -38,9 +39,10 @@ const App = () => {
             listRect={listRect}
             jobsRect={jobsRect}
             contactRect={contactRect}
+            homeRect={homeRect}
           />
         </NavWrapper>
-        <Header />
+        <Header ref={homeRef} />
         <ForwaredDescription
           dark
           text={descriptionData[0].text}

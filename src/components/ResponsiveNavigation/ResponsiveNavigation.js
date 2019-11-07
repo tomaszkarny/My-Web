@@ -11,6 +11,7 @@ const ResponsiveNavigation = ({
   listRect,
   jobsRect,
   contactRect,
+  homeRect,
 }) => {
   return (
     <StyledNav>
@@ -22,7 +23,17 @@ const ResponsiveNavigation = ({
           <Burger open={open} setOpen={setOpen} />
 
           <li onClick={() => setOpen(!open)}>
-            <a href="#home">Home </a>
+            <a
+              href="#home"
+              onClick={() =>
+                window.scrollTo({
+                  top: homeRect.top,
+                  behavior: 'smooth',
+                })
+              }
+            >
+              Home{' '}
+            </a>
           </li>
           <li onClick={() => setOpen(!open)}>
             <a
