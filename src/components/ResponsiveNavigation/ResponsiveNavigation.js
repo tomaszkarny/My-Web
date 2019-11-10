@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { StyledNav, Logo } from './ResponsiveNavigation.styles';
 
@@ -12,7 +12,27 @@ const ResponsiveNavigation = ({
   jobsRect,
   contactRect,
   homeRect,
+  timeLineRect,
 }) => {
+  const [whiteBacground, setWhiteBacground] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        (window.scrollY > aboutRect.top && window.scrollY < timeLineRect.top) ||
+        window.scrollY > jobsRect.top
+      ) {
+        setWhiteBacground(true);
+      } else {
+        setWhiteBacground(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
   return (
     <StyledNav>
       <nav>
@@ -20,7 +40,11 @@ const ResponsiveNavigation = ({
           <Logo>
             <a href="/">Company Name</a>
           </Logo>
-          <Burger open={open} setOpen={setOpen} />
+          <Burger
+            open={open}
+            setOpen={setOpen}
+            whiteBackground={whiteBacground}
+          />
 
           <li onClick={() => setOpen(!open)}>
             <a

@@ -28,11 +28,15 @@ export const StyledBurger = styled.button`
     div {
       width: 30px;
       height: 2px;
-      background: black;
+      background: ${({ whiteBackground }) =>
+        whiteBackground ? 'white' : 'black'};
+      background: ${({ open }) => (open ? 'black' : '')};
+
       border-radius: 10px;
       transition: all 0.3s linear;
       position: relative;
       transform-origin: 1px;
+
       :first-child {
         transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
       }
