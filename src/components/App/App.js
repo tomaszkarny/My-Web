@@ -7,7 +7,7 @@ import ForwaredDescription from '../Description/Description';
 import { descriptionData } from '../Description/descriptionData';
 import Image from '../Image/Image';
 import { imageData } from '../Image/imageData';
-import TimeLine from '../TimeLine/TimeLine';
+import ForwaredTimeLine from '../TimeLine/TimeLine';
 import ForwaredList from '../List/List';
 import ForwaredForm from '../Form/Form';
 import Map from '../Map/Map';
@@ -26,6 +26,7 @@ const App = () => {
   const [jobsRect, jobsRef] = useClientRect();
   const [contactRect, contactRef] = useClientRect();
   const [homeRect, homeRef] = useClientRect();
+  const [timeLineRect, timeLineRef] = useClientRect();
   return (
     <div>
       <Global styles={globalStyles} />
@@ -40,6 +41,7 @@ const App = () => {
             jobsRect={jobsRect}
             contactRect={contactRect}
             homeRect={homeRect}
+            timeLineRect={timeLineRect}
           />
         </NavWrapper>
         <Header ref={homeRef} />
@@ -51,7 +53,7 @@ const App = () => {
           ref={aboutRef}
         />
         <Image image={imageData[0].image} alt={imageData[0].alt} first />
-        <TimeLine />
+        <ForwaredTimeLine ref={timeLineRef} />
         <ForwaredDescription
           text={descriptionData[1].text}
           title={descriptionData[1].title}
