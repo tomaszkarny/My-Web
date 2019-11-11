@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const ImageWrapper = styled.div`
-  grid-area: ${({ first }) => (first ? 'ImageFirst' : 'ImageSecond')};
+  grid-area: ${({ gridArea }) => gridArea || ''};
 
   img {
     object-fit: cover;

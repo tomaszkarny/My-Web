@@ -4,9 +4,9 @@ import { ListWrapper, Wrapper } from './List.styles';
 import { listData } from './listData';
 import ListItem from './ListItem';
 
-const List = (props, ref) => {
+const List = ({ id }, ref) => {
   return (
-    <Wrapper ref={ref}>
+    <Wrapper ref={ref} id={id}>
       <h1>Our services</h1>
       <ListWrapper>
         {listData.map((data, idx) => (

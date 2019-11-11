@@ -1,5 +1,5 @@
-import people from './people.jpg';
-import meeting from './meeting.jpg';
+import people from 'assets/people.jpg';
+import meeting from 'assets/meeting.jpg';
 
 export const imageData = [
   {

@@ -8,6 +8,7 @@ export const FormWrapper = styled.div`
   padding: 0 10%;
   scroll-behavior: smooth;
   overflow-y: scroll;
+  flex: 1;
 `;
 
 export const ContactForm = styled.form`

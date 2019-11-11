@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledHeader } from './Header.styles';
+import { StyledHeader } from './Hero.styles';
 
 const Header = ({ id }, ref) => {
   return (

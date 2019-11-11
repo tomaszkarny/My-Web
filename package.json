@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.7.2",
     "@emotion/babel-preset-css-prop": "^10.0.17",
     "@emotion/core": "^10.0.21",
     "@emotion/styled": "^10.0.17",
@@ -11,6 +12,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.6",
+    "emotion-theming": "^10.0.19",
     "facepaint": "^1.2.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -22,9 +24,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

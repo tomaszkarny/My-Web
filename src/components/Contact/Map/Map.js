@@ -8,7 +8,7 @@ import {
 
 import { MapWrapper } from './Map.styles';
 
-const Map = withScriptjs(
+export const Map = withScriptjs(
   withGoogleMap(props => (
     <MapWrapper>
       <GoogleMap
@@ -22,5 +22,3 @@ const Map = withScriptjs(
     </MapWrapper>
   ))
 );
-
-export default Map;

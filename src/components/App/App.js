@@ -1,74 +1,71 @@
-import React, { useState, useRef } from 'react';
-import { useOnClickOutside, useClientRect } from '../../constants/hooks';
-
-import ResponsiveNavigation from '../ResponsiveNavigation/ResponsiveNavigation';
-import Header from '../Header/Header';
-import ForwaredDescription from '../Description/Description';
-import { descriptionData } from '../Description/descriptionData';
-import Image from '../Image/Image';
-import { imageData } from '../Image/imageData';
-import ForwaredTimeLine from '../TimeLine/TimeLine';
-import ForwaredList from '../List/List';
-import ForwaredForm from '../Form/Form';
-import Map from '../Map/Map';
+import React from 'react';
 
 import { Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
+
+import { THEME } from 'constants/theme';
+
+import ResponsiveNavigation from '../Navigation/Navigation';
+import Header from '../Hero/Hero';
+
+import { SectionCommon } from 'components/common/SectionCommon/SectionCommon';
+
+import Image from '../common/Image/Image';
+import ForwaredTimeLine from '../Skills/TimeLine/TimeLine';
+import ForwaredList from '../MyProjects/List/List';
+
+import { Form } from '../Contact/Form/Form';
+import { Map } from '../Contact/Map/Map';
+
+import { descriptionData } from '../common/SectionCommon/descriptionData';
+import { imageData } from '../common/Image/imageData';
+
 import { globalStyles } from '../../styles/globalStyles';
 import { AppWrapper, NavWrapper } from './App.styles';
 
-const App = () => {
-  const [open, setOpen] = useState(false);
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
-
-  const [aboutRect, aboutRef] = useClientRect();
-  const [listRect, listRef] = useClientRect();
-  const [jobsRect, jobsRef] = useClientRect();
-  const [contactRect, contactRef] = useClientRect();
-  const [homeRect, homeRef] = useClientRect();
-  const [timeLineRect, timeLineRef] = useClientRect();
-  return (
+const App = () => (
+  <ThemeProvider theme={THEME}>
     <div>
       <Global styles={globalStyles} />
 
       <AppWrapper>
-        <NavWrapper ref={node}>
-          <ResponsiveNavigation
-            open={open}
-            setOpen={setOpen}
-            aboutRect={aboutRect}
-            listRect={listRect}
-            jobsRect={jobsRect}
-            contactRect={contactRect}
-            homeRect={homeRect}
-            timeLineRect={timeLineRect}
-          />
+        <NavWrapper>
+          <ResponsiveNavigation />
         </NavWrapper>
-        <Header ref={homeRef} />
-        <ForwaredDescription
+
+        <Header id="hero" />
+
+        <SectionCommon
           dark
           text={descriptionData[0].text}
           title={descriptionData[0].title}
-          first
-          ref={aboutRef}
+          gridArea="DescriptionFirst"
+          id="about"
         />
-        <Image image={imageData[0].image} alt={imageData[0].alt} first />
-        <ForwaredTimeLine ref={timeLineRef} />
-        <ForwaredDescription
+        <Image
+          image={imageData[0].image}
+          alt={imageData[0].alt}
+          gridArea="ImageFirst"
+        />
+
+        <ForwaredTimeLine id="skills" />
+        <SectionCommon
           text={descriptionData[1].text}
           title={descriptionData[1].title}
         />
-        <ForwaredList ref={listRef} />
+
+        <ForwaredList id="myProjects" />
+
         <Image image={imageData[1].image} alt={imageData[1].alt} />
-        <ForwaredDescription
+        <SectionCommon
           dark
           text={descriptionData[2].text}
           title={descriptionData[2].title}
-          third
-          ref={jobsRef}
+          gridArea="DescriptionThird"
+          id="hiring"
         />
-        <ForwaredForm ref={contactRef} />
 
+        <Form id="contact" />
         <Map
           isMarkerShown={true}
           googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAQAKku9FagF_chl9yAA7vfRoViwXCy7TA"
@@ -80,9 +77,24 @@ const App = () => {
           }
           mapElement={<div style={{ height: `100%` }} />}
         />
+
+        {/*
+          <Navigation id />
+          <Hero id  />
+          <About id  />
+          <Skills id  />
+          <MyProjects id  />
+          <Hiring id  />
+
+
+          <Section id={id}> // display: flex
+            <SectionCommon /> // flex: 1
+            <Image /> // flex: 1
+          </Section>
+         */}
       </AppWrapper>
     </div>
-  );
-};
+  </ThemeProvider>
+);
 
 export default App;
