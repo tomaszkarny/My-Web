@@ -1,17 +1,16 @@
 import styled from '@emotion/styled';
 
-export const StyledHeader = styled.div`
-  grid-area: header;
+export const StyledHero = styled.div`
   justify-content: center;
   display: flex;
   flex-flow: column;
   align-items: center;
   margin: 0 30px;
-  scroll-snap-align: start;
+  height: 100vh;
 
   h1 {
     letter-spacing: 1px;
-    color: #141720;
+    color: ${({ theme }) => theme.color.dark};
     text-transform: uppercase;
     font-family: Montserrat-Bold;
     font-size: 36px;
@@ -50,8 +49,8 @@ export const StyledHeader = styled.div`
     font-stretch: normal;
     line-height: 2.4;
     letter-spacing: 0.5px;
+    color: ${({ theme }) => theme.color.midGray};
 
-    color: #5d5f65;
     @media (max-width: 768px) {
       font-size: 13px;
       line-height: 1.5;

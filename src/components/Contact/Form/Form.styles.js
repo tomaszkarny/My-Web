@@ -1,13 +1,9 @@
 import styled from '@emotion/styled';
 
 export const FormWrapper = styled.div`
-  background-color: #141720;
-  grid-area: Form;
+  background-color: ${({ theme }) => theme.color.dark};
   display: flex;
   justify-content: center;
-  padding: 0 10%;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
   flex: 1;
 `;
 
@@ -16,6 +12,7 @@ export const ContactForm = styled.form`
   flex-flow: column;
   width: 100%;
   justify-content: center;
+  padding: 0 5em;
 
   h1 {
     font-size: 28px;
@@ -24,7 +21,7 @@ export const ContactForm = styled.form`
     font-style: normal;
     line-height: 0.93;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.color.light};
     padding: 40px 0;
   }
   label {
@@ -35,7 +32,7 @@ export const ContactForm = styled.form`
     font-style: normal;
     line-height: 1.73;
     letter-spacing: 0.5px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.color.light};
     text-align: left;
     padding: 20px 0;
   }
@@ -46,7 +43,7 @@ export const ContactForm = styled.form`
     border: none;
     border-bottom: 2px solid red;
     height: 50px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.color.light};
   }
 
   button {
@@ -55,7 +52,7 @@ export const ContactForm = styled.form`
     width: 120px;
     height: 35px;
     border-radius: 100px;
-    background-color: #c71222;
+    background-color: ${({ theme }) => theme.color.thunderbird};
     margin: 20px 0;
   }
 `;

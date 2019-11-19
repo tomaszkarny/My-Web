@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
 
 export const TimeLineWrapper = styled.div`
-  grid-area: TimeLine;
   align-content: center;
-
+  flex: 1;
   margin: 0;
   display: flex;
   flex-flow: wrap;
@@ -38,7 +37,7 @@ export const Item = styled.div`
     width: 17px;
     height: 17px;
     border-radius: 50%;
-    background: #ffffff;
+    background: ${({ theme }) => theme.color.light};
     border: 3px solid #d4d4d4;
   }
   :after {

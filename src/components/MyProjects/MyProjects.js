@@ -1,3 +1,21 @@
 import React from 'react';
 
-export const MyProjects = () => <div>MyProjects</div>;
+import {
+  ProjectsWrapper,
+  Wrapper,
+} from 'components/MyProjects/Projects.styles';
+import { projectsData } from 'components/MyProjects/projectsData';
+import { ProjectsItem } from 'components/MyProjects/ProjectsItem';
+
+export const MyProjects = () => {
+  return (
+    <Wrapper id="myProjects">
+      <h1>My Projects</h1>
+      <ProjectsWrapper>
+        {projectsData.map((data, idx) => (
+          <ProjectsItem data={data} key={idx} />
+        ))}
+      </ProjectsWrapper>
+    </Wrapper>
+  );
+};

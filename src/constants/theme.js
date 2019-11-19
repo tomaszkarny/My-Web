@@ -5,5 +5,7 @@ export const THEME = {
     light: '#ffffff',
     mineShaft: '#2b2b2b',
     midGray: '#5d5f65',
+    thunderbird: '#c71222',
+    gallery: '#EFEFEF',
   },
 };

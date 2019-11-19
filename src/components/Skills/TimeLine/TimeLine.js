@@ -1,18 +1,16 @@
 import React from 'react';
-import { TimeLineWrapper } from './TimeLine.styles';
-import TimeLineItem from './TimeLineItem';
-import { timelineData } from './timelineData';
 
-const TimeLine = ({ ...props }, ref) => {
+import { TimeLineWrapper } from 'components/Skills/TimeLine/TimeLine.styles';
+
+import TimeLineItem from 'components/Skills/TimeLine/TimeLineItem';
+import { timelineData } from 'components/Skills/TimeLine/timelineData';
+
+export const TimeLine = () => {
   return (
-    <TimeLineWrapper ref={ref}>
+    <TimeLineWrapper>
       {timelineData.map((data, idx) => (
         <TimeLineItem data={data} key={idx} />
       ))}
     </TimeLineWrapper>
   );
 };
-
-const ForwaredTimeLine = React.forwardRef(TimeLine);
-
-export default ForwaredTimeLine;

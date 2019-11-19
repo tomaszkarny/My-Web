@@ -1,6 +1,6 @@
 import { faFile } from '@fortawesome/free-regular-svg-icons';
 
-export const listData = [
+export const projectsData = [
   {
     title: 'Consectetur vestibulum',
     text: `Consectetur vestibulum maecenas curabitur hac felis vestibulum urna

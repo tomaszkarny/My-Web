@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Wrapper = styled.div`
-  grid-area: List;
-  background-color: #efefef;
+  background-color: ${({ theme }) => theme.color.gallery};
   text-align: center;
 
   h1 {
@@ -10,19 +9,17 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const ListWrapper = styled.div`
+export const ProjectsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-auto-rows: 200px;
+  padding-bottom: 30px;
 
   @media (max-width: 900px) {
     grid-auto-rows: 200px;
   }
 
-  /* grid-column-gap: 40px;
-  grid-row-gap: 40px; */
-  padding: 40px;
-  background-color: #efefef;
+  background-color: ${({ theme }) => theme.color.gallery};
   align-items: center;
   justify-items: center;
 `;
@@ -30,7 +27,6 @@ export const ListWrapper = styled.div`
 export const Item = styled.div`
   background: tomato;
   width: 300px;
-
   background: transparent;
   text-align: left;
 
@@ -42,7 +38,7 @@ export const Item = styled.div`
     font-style: normal;
     line-height: 1.3;
     letter-spacing: normal;
-    color: #141720;
+    color: ${({ theme }) => theme.color.dark};
     text-align: left;
     padding: 10px 0;
   }
@@ -55,7 +51,7 @@ export const Item = styled.div`
     font-style: normal;
     line-height: 1.73;
     letter-spacing: 0.5px;
-    color: #5d5f65;
+    color: ${({ theme }) => theme.color.midGray};
     text-align: left;
   }
 `;

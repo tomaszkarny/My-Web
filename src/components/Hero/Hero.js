@@ -1,16 +1,12 @@
 import React from 'react';
 
-import { StyledHeader } from './Hero.styles';
+import { StyledHero } from './Hero.styles';
 
-const Header = ({ id }, ref) => {
+export const Hero = ({ id }) => {
   return (
-    <StyledHeader id={id} ref={ref}>
+    <StyledHero id={id}>
       <h1>Welcome to Our Company</h1>
       <p>Habitasse vestibulum a mi odio ut rutrum mauris leo lorem</p>
-    </StyledHeader>
+    </StyledHero>
   );
 };
-
-const ForwaredHeader = React.forwardRef(Header);
-
-export default ForwaredHeader;

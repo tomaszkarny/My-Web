@@ -1,19 +1,13 @@
 import React from 'react';
 
-import { StyledBurger } from './Burger.styles';
+import { StyledBurger } from 'components/Navigation/Burger/Burger.styles';
 
-const Burger = ({ open, setOpen, whiteBackground }) => {
+export const Burger = ({ open, setOpen }) => {
   return (
-    <StyledBurger
-      open={open}
-      onClick={() => setOpen(!open)}
-      whiteBackground={whiteBackground}
-    >
+    <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />
     </StyledBurger>
   );
 };
-
-export default Burger;

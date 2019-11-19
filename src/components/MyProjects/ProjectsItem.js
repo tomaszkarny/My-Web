@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Item } from './List.styles';
+import { Item } from 'components/MyProjects/Projects.styles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ListItem = ({ data }) => {
+export const ProjectsItem = ({ data }) => {
   return (
     <Item>
       <FontAwesomeIcon
@@ -18,5 +18,3 @@ const ListItem = ({ data }) => {
     </Item>
   );
 };
-
-export default ListItem;

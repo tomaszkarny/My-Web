@@ -1,12 +1,10 @@
 import React from 'react';
 import { ImageWrapper } from './Image.styles';
 
-const Image = ({ image, alt, first }) => {
+export const Image = ({ image, alt }) => {
   return (
-    <ImageWrapper first={first}>
+    <ImageWrapper>
       <img src={image} alt={alt} />
     </ImageWrapper>
   );
 };
-
-export default Image;

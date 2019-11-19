@@ -1,13 +1,15 @@
 import React, { useState, useRef } from 'react';
 
-import { SECTION_IDS } from 'constants/sectionIds';
+import { linkData } from 'components/Navigation/Link/linkData';
+
 import { useOnClickOutside } from 'utils/hooks';
 
-import { StyledNav, Logo } from './Navigation.styles';
+import { StyledNav, Logo } from 'components/Navigation/Navigation.styles';
 
-import Burger from './Burger/Burger';
+import { Burger } from 'components/Navigation/Burger/Burger';
+import { Link } from './Link/Link';
 
-const ResponsiveNavigation = () => {
+export const Navigation = () => {
   const [open, setOpen] = useState(false);
   const node = useRef();
 
@@ -33,59 +35,17 @@ const ResponsiveNavigation = () => {
       <nav>
         <ul className={open ? 'active' : ''}>
           <Logo>
-            <a href="/">Company Name</a>
+            <a href="/">Tomasz Karny</a>
           </Logo>
           <Burger open={open} setOpen={setOpen} />
 
-          <li>
-            <a
-              href={`#${SECTION_IDS.HERO}`}
-              name={SECTION_IDS.HERO}
-              onClick={handleItemClick}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href={`#${SECTION_IDS.ABOUT}`}
-              name={SECTION_IDS.ABOUT}
-              onClick={handleItemClick}
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href={`#${SECTION_IDS.MY_PROJECTS}`}
-              name={SECTION_IDS.MY_PROJECTS}
-              onClick={handleItemClick}
-            >
-              My Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href={`#${SECTION_IDS.HIRING}`}
-              name={SECTION_IDS.HIRING}
-              onClick={handleItemClick}
-            >
-              Hiring
-            </a>
-          </li>
-          <li>
-            <a
-              href={`#${SECTION_IDS.CONTACT}`}
-              name={SECTION_IDS.CONTACT}
-              onClick={handleItemClick}
-            >
-              Contact Us
-            </a>
-          </li>
+          {linkData.map(data => (
+            <li key={data.id}>
+              <Link data={data} onClick={handleItemClick} />
+            </li>
+          ))}
         </ul>
       </nav>
     </StyledNav>
   );
 };
-
-export default ResponsiveNavigation;

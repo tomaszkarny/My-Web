@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const StyledNav = styled.div`
   nav {
-    background: white;
+    background: ${({ theme }) => theme.color.light};
     height: 60px;
     width: 100%;
   }
@@ -25,8 +25,8 @@ export const StyledNav = styled.div`
       left: -500px;
       top: 60px;
       padding-top: 40px;
-      background: white;
-      transition: 300ms ease all;
+      background: ${({ theme }) => theme.color.light};
+      transition: 350ms ease all;
       justify-content: flex-start;
 
       &.active {
@@ -43,49 +43,13 @@ export const StyledNav = styled.div`
     padding: 10px 20px;
     &:hover,
     &:active {
-      color: black;
+      color: ${({ theme }) => theme.color.primary};
     }
 
     @media (max-width: 768px) {
       width: 100%;
       padding-left: 0;
       padding-right: 0;
-    }
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    font-family: OpenSans;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1px;
-    color: #5d5f65;
-    transition: opacity 0.125s linear;
-
-    &:hover,
-    &:active {
-      color: black;
-      transition: 0.3s;
-    }
-
-    @media (max-width: 768px) {
-      flex-direction: row;
-      justify-content: space-between;
-      margin-left: 20px;
-      margin-right: 16px;
-    }
-    @media only screen and (min-width: 768px) and (max-width: 959px) {
-      font-size: 13px;
-    }
-    @media (min-width: 1200px) {
-      font-size: 18px;
     }
   }
 `;
@@ -104,11 +68,8 @@ export const Logo = styled.div`
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #141720;
+    color: ${({ theme }) => theme.color.dark};
+    text-decoration: none;
     @media only screen and (min-width: 768px) and (max-width: 959px) {
       font-size: 15px;
     }

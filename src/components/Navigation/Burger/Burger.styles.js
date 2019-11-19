@@ -12,7 +12,7 @@ export const StyledBurger = styled.button`
     justify-content: space-around;
     height: 24px;
     width: 30px;
-    background-color: black;
+    background-color: ${({ theme }) => theme.color.primary};
     margin-right: 1rem;
     background: transparent;
     border: none;
@@ -28,10 +28,7 @@ export const StyledBurger = styled.button`
     div {
       width: 30px;
       height: 2px;
-      background: ${({ whiteBackground }) =>
-        whiteBackground ? 'white' : 'black'};
-      background: ${({ open }) => (open ? 'black' : '')};
-
+      background: ${({ theme }) => theme.color.primary};
       border-radius: 10px;
       transition: all 0.3s linear;
       position: relative;

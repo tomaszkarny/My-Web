@@ -4,16 +4,16 @@ import { Section } from 'components/common/Section/Section';
 import { SectionCommon } from 'components/common/SectionCommon/SectionCommon';
 import { Image } from 'components/common/Image/Image';
 
-import { aboutData } from './aboutData';
+import { hiringData } from 'components/Hiring/hiringData';
 
-export const About = () => (
+export const Hiring = () => (
   <Section>
+    <Image image={hiringData.image} alt={hiringData.alt} />
     <SectionCommon
-      title={aboutData.title}
-      text={aboutData.text}
+      title={hiringData.title}
+      text={hiringData.text}
       dark
-      id="about"
+      id="hiring"
     />
-    <Image image={aboutData.image} alt={aboutData.alt} />
   </Section>
 );
