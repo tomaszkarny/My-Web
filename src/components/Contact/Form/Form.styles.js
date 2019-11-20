@@ -5,6 +5,9 @@ export const FormWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex: 1;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContactForm = styled.form`
@@ -12,7 +15,7 @@ export const ContactForm = styled.form`
   flex-flow: column;
   width: 100%;
   justify-content: center;
-  padding: 0 5em;
+  padding: 0 10%;
 
   h1 {
     font-size: 28px;

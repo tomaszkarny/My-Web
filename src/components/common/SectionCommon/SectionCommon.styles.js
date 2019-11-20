@@ -10,4 +10,7 @@ export const SectionWrapper = styled.div`
   min-height: 750px;
 
   flex: 1;
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;

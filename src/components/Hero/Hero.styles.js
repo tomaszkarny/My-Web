@@ -5,7 +5,7 @@ export const StyledHero = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin: 0 30px;
+
   height: 100vh;
 
   h1 {
@@ -49,6 +49,7 @@ export const StyledHero = styled.div`
     font-stretch: normal;
     line-height: 2.4;
     letter-spacing: 0.5px;
+    padding: 20px;
     color: ${({ theme }) => theme.color.midGray};
 
     @media (max-width: 768px) {

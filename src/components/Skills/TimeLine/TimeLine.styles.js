@@ -23,6 +23,9 @@ export const ItemWrapper = styled.div`
     display: flex;
     flex: 1;
   }
+  @media (max-width: 400px) {
+    padding: 0;
+  }
 `;
 
 export const Item = styled.div`
@@ -39,6 +42,10 @@ export const Item = styled.div`
     border-radius: 50%;
     background: ${({ theme }) => theme.color.light};
     border: 3px solid #d4d4d4;
+
+    @media (max-width: 400px) {
+      left: -13px;
+    }
   }
   :after {
     border: 3px solid #c71222;
@@ -55,6 +62,9 @@ export const Item = styled.div`
     line-height: 1.63;
     letter-spacing: normal;
     color: #141720;
+    @media (max-width: 400px) {
+      padding-left: 25px;
+    }
   }
 `;
 
@@ -86,6 +96,9 @@ export const Date = styled.div`
 `;
 
 export const List = styled.div`
+  @media (max-width: 400px) {
+    padding-left: 25px;
+  }
   ul {
     margin-top: 0;
     margin-bottom: 1rem;

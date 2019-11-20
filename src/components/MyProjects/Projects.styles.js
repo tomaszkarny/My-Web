@@ -18,6 +18,9 @@ export const ProjectsWrapper = styled.div`
   @media (max-width: 900px) {
     grid-auto-rows: 200px;
   }
+  @media (max-width: 350px) {
+    grid-template-columns: 1fr;
+  }
 
   background-color: ${({ theme }) => theme.color.gallery};
   align-items: center;
