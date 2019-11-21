@@ -18,7 +18,7 @@ export const ProjectsWrapper = styled.div`
   @media (max-width: 900px) {
     grid-auto-rows: 200px;
   }
-  @media (max-width: 350px) {
+  @media (max-width: 400px) {
     grid-template-columns: 1fr;
   }
 
@@ -29,9 +29,10 @@ export const ProjectsWrapper = styled.div`
 
 export const Item = styled.div`
   background: tomato;
-  width: 300px;
+  width: 100%;
   background: transparent;
   text-align: left;
+  padding: 0 10%;
 
   h3 {
     font-family: Montserrat;
@@ -56,5 +57,6 @@ export const Item = styled.div`
     letter-spacing: 0.5px;
     color: ${({ theme }) => theme.color.midGray};
     text-align: left;
+    word-break: break-all;
   }
 `;

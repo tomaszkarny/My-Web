@@ -5,6 +5,7 @@ export const FormWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex: 1;
+  min-height: 700px;
   @media (max-width: 900px) {
     flex-direction: column;
   }

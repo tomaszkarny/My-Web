@@ -7,7 +7,7 @@ export const SectionWrapper = styled.div`
   align-items: center;
   background-color: ${({ dark, theme }) =>
     dark ? theme.color.dark : theme.color.light};
-  min-height: 750px;
+  min-height: 700px;
 
   flex: 1;
   @media (max-width: 400px) {

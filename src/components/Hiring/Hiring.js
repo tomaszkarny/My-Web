@@ -8,12 +8,12 @@ import { hiringData } from 'components/Hiring/hiringData';
 
 export const Hiring = () => (
   <Section>
-    <Image image={hiringData.image} alt={hiringData.alt} />
     <SectionCommon
       title={hiringData.title}
       text={hiringData.text}
       dark
       id="hiring"
     />
+    <Image image={hiringData.image} alt={hiringData.alt} />
   </Section>
 );
