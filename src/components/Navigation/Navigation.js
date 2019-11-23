@@ -18,13 +18,27 @@ export const Navigation = () => {
   const handleItemClick = e => {
     e.preventDefault();
 
-    const element = document
-      .querySelector(`#${e.target.name}`)
-      .getBoundingClientRect();
+    const element = document.querySelector(`#${e.target.name}`);
 
-    window.scrollTo({
-      top: element.top,
+    const sectionOptions = {
+      rootMargin: '-200px 0px 0px 0px',
+    };
+
+    const sectionObserver = new IntersectionObserver(function(
+      entries,
+      sectionObserver
+    ) {
+      entries.forEach(entry => {
+        return entry.target.getBoundingClientRect().top;
+      });
+    },
+    sectionOptions);
+
+    sectionObserver.observe(element);
+
+    element.scrollIntoView({
       behavior: 'smooth',
+      top: element,
     });
 
     setOpen(!open);

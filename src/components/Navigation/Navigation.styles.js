@@ -3,8 +3,13 @@ import styled from '@emotion/styled';
 export const StyledNav = styled.div`
   nav {
     background: ${({ theme }) => theme.color.light};
-    height: 60px;
+    height: 80px;
     width: 100%;
+    z-index: 9999;
+    position: fixed;
+    @media (max-width: 768px) {
+      height: 60px;
+    }
   }
 
   ul {
@@ -16,7 +21,7 @@ export const StyledNav = styled.div`
     height: 100%;
     align-items: center;
     justify-content: flex-end;
-    /* box-shadow: 2px 2px 2px #ccc; */
+    box-shadow: 2px 2px 2px #ccc;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -41,8 +46,7 @@ export const StyledNav = styled.div`
   li {
     list-style-type: none;
     padding: 10px 20px;
-    &:hover,
-    &:active {
+    &:hover {
       color: ${({ theme }) => theme.color.primary};
     }
 
@@ -61,7 +65,6 @@ export const Logo = styled.div`
 
   display: flex;
   flex: 1;
-  padding-top: 20px;
   padding-left: 20px;
 
   a {

@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const StyledAnchor = styled.a`
-  color: ${({ theme }) => theme.color.light};
   text-decoration: none;
   display: flex;
   flex-direction: row-reverse;
@@ -12,8 +11,9 @@ export const StyledAnchor = styled.a`
   color: ${({ theme }) => theme.color.midGray};
   transition: opacity 0.2s linear;
 
-  &:hover,
-  &:active {
+  :hover,
+  :active,
+  :focus {
     color: ${({ theme }) => theme.color.primary};
     transition: 0.3s;
   }
