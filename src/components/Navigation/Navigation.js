@@ -20,25 +20,9 @@ export const Navigation = () => {
 
     const element = document.querySelector(`#${e.target.name}`);
 
-    const sectionOptions = {
-      rootMargin: '-200px 0px 0px 0px',
-    };
-
-    const sectionObserver = new IntersectionObserver(function(
-      entries,
-      sectionObserver
-    ) {
-      entries.forEach(entry => {
-        return entry.target.getBoundingClientRect().top;
-      });
-    },
-    sectionOptions);
-
-    sectionObserver.observe(element);
-
-    element.scrollIntoView({
+    window.scroll({
+      top: element.offsetTop - 60,
       behavior: 'smooth',
-      top: element,
     });
 
     setOpen(!open);

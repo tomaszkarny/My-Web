@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const StyledNav = styled.div`
   nav {
     background: ${({ theme }) => theme.color.light};
-    height: 80px;
+    height: 60px;
     width: 100%;
     z-index: 9999;
     position: fixed;
