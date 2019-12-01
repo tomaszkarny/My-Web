@@ -47,7 +47,7 @@ export const StyledHero = styled.div`
       line-height: 1.5;
     }
     @media only screen and (min-width: 768px) and (max-width: 959px) {
-      font-size: 16px;
+      font-size: 17px;
     }
     @media only screen and (min-width: 1200px) {
       font-size: 25px;

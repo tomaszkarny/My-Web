@@ -30,7 +30,7 @@ export const linkData = [
   {
     href: `#${SECTION_IDS.CONTACT}`,
     name: SECTION_IDS.CONTACT,
-    text: 'Contact Us',
+    text: 'Contact Me',
     id: 5,
   },
 ];

@@ -2,14 +2,8 @@ import people from 'assets/people.jpg';
 
 export const aboutData = {
   title: 'About Me',
-  text: `A posuere scelerisque gravida facilisi parturient magna urna donec parturient
-     per augue a amet quam nullam a ad a. Parturient velit imperdiet in suspendisse eget
-      a parturient adipiscing penatibus convallis himenaeos felis torquent facilisi elementum
-       a penatibus suscipit aliquam.
+  text: `My name is Tomasz. I'am interested in Web Development. Every day I'am learning new things and broaden my knowlege.  My advantages are conscientiousness and perseverance. Currently  working  in manufacturing industry as a cnc operator, programmer. I'am living in Białystok. I want to become a web developer.`,
 
-    Porta at at suspendisse dolor fames ullamcorper cum id per suspendisse
-    a dignissim eu dapibus platea turpis augue mi proin lorem morbi sapien facilisis lectus.`,
-  area: 'DescriptionFirst',
   image: people,
   alt: 'people',
 };

@@ -21,7 +21,7 @@ export const Navigation = () => {
     const element = document.querySelector(`#${e.target.name}`);
 
     window.scroll({
-      top: element.offsetTop - 60,
+      top: element.offsetTop - 30,
       behavior: 'smooth',
     });
 

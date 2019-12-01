@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 export const SectionDescription = styled.p`
   justify-content: center;
   align-items: center;
-  word-break: break-all;
+  word-break: break-word;
   font-family: OpenSans;
-  font-size: 15px;
+  font-size: 16px;
   width: 100%;
 
   line-height: 1.73;
