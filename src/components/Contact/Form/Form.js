@@ -16,7 +16,7 @@ export const Form = ({ id }) => (
       <label htmlFor="message">Message</label>
       <textarea name="message" />
 
-      <button type="submit"> Contact Us </button>
+      <button type="submit"> Send </button>
     </ContactForm>
   </FormWrapper>
 );
