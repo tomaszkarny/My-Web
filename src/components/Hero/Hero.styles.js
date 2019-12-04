@@ -8,6 +8,9 @@ export const StyledHero = styled.div`
   text-align: center;
   padding: 0 10%;
   height: 100vh;
+  @media (max-width: 768px) {
+    min-height: 500px;
+  }
 
   h1 {
     color: ${({ theme }) => theme.color.dark};

@@ -8,6 +8,9 @@ export const SectionWrapper = styled.div`
   background-color: ${({ dark, theme }) =>
     dark ? theme.color.dark : theme.color.light};
   min-height: 700px;
+  @media (max-width: 700px) {
+    min-height: 500px;
+  }
 
   flex: 1;
   @media (max-width: 400px) {

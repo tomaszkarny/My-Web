@@ -6,14 +6,9 @@ import { Image } from 'components/common/Image/Image';
 
 import { aboutData } from './aboutData';
 
-export const About = () => (
+export const About = ({ id }) => (
   <Section>
-    <SectionCommon
-      title={aboutData.title}
-      text={aboutData.text}
-      dark
-      id="about"
-    />
+    <SectionCommon title={aboutData.title} text={aboutData.text} dark id={id} />
     <Image image={aboutData.image} alt={aboutData.alt} />
   </Section>
 );

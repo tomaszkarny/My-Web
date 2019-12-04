@@ -1,22 +1,30 @@
 import React from 'react';
 
-import { FormWrapper, ContactForm } from './Form.styles';
+import {
+  FormWrapper,
+  ContactForm,
+  FormHeader,
+  FormLabel,
+  FormInput,
+  FormText,
+  FormButton,
+} from './Form.styles';
 
 export const Form = ({ id }) => (
   <FormWrapper id={id}>
     <ContactForm name="contact" method="POST">
-      <h1>Contact Me </h1>
-      <input type="hidden" name="form-name" value="contact" />
-      <label htmlFor="name">Name</label>
-      <input type="text" name="name" />
+      <FormHeader>Contact Me </FormHeader>
+      <FormInput type="hidden" name="form-name" value="contact" />
+      <FormLabel htmlFor="name">Name</FormLabel>
+      <FormInput type="text" name="name" />
 
-      <label htmlFor="email">Email </label>
-      <input type="email" name="email" required />
+      <FormLabel htmlFor="email">Email </FormLabel>
+      <FormInput type="email" name="email" required />
 
-      <label htmlFor="message">Message</label>
-      <textarea name="message" />
+      <FormLabel htmlFor="message">Message</FormLabel>
+      <FormText name="message" />
 
-      <button type="submit"> Send </button>
+      <FormButton type="submit"> Send </FormButton>
     </ContactForm>
   </FormWrapper>
 );

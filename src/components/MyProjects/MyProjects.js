@@ -7,15 +7,13 @@ import {
 import { projectsData } from 'components/MyProjects/projectsData';
 import { ProjectsItem } from 'components/MyProjects/ProjectsItem';
 
-export const MyProjects = () => {
-  return (
-    <Wrapper id="myProjects">
-      <h1>My Projects</h1>
-      <ProjectsWrapper>
-        {projectsData.map((data, idx) => (
-          <ProjectsItem data={data} key={idx} />
-        ))}
-      </ProjectsWrapper>
-    </Wrapper>
-  );
-};
+export const MyProjects = ({ id }) => (
+  <Wrapper id={id}>
+    <h1>My Projects</h1>
+    <ProjectsWrapper>
+      {projectsData.map((data, idx) => (
+        <ProjectsItem data={data} key={idx} />
+      ))}
+    </ProjectsWrapper>
+  </Wrapper>
+);

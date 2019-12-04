@@ -6,14 +6,14 @@ import { Image } from 'components/common/Image/Image';
 
 import { hiringData } from 'components/Hiring/hiringData';
 
-export const Hiring = () => (
+export const Hiring = ({ id }) => (
   <Section>
     <Image image={hiringData.image} alt={hiringData.alt} />
     <SectionCommon
       title={hiringData.title}
       text={hiringData.text}
       dark
-      id="hiring"
+      id={id}
     />
   </Section>
 );
