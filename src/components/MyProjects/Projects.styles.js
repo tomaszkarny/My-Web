@@ -4,10 +4,10 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.color.gallery};
   text-align: center;
   padding: 5% 0;
+`;
 
-  h1 {
-    padding-bottom: 5%;
-  }
+export const ProjectsHeader = styled.h1`
+  padding-bottom: 5%;
 `;
 
 export const ProjectsWrapper = styled.div`

@@ -1,8 +1,8 @@
 import React from 'react';
-import { ImageWrapper } from './Image.styles';
+import { ImageWrapper, StyledImg } from './Image.styles';
 
 export const Image = ({ image, alt }) => (
   <ImageWrapper>
-    <img src={image} alt={alt} />
+    <StyledImg src={image} alt={alt} />
   </ImageWrapper>
 );

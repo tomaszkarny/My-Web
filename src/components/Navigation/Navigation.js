@@ -39,7 +39,12 @@ export const Navigation = () => {
 
           {linkData.map(data => (
             <li key={data.id}>
-              <Link data={data} onClick={handleItemClick} />
+              <Link
+                text={data.text}
+                name={data.name}
+                href={data.href}
+                onClick={handleItemClick}
+              />
             </li>
           ))}
         </ul>
