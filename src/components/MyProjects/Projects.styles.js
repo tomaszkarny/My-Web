@@ -3,9 +3,10 @@ import styled from '@emotion/styled';
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.color.gallery};
   text-align: center;
+  padding: 5% 0;
 
   h1 {
-    padding: 30px 0;
+    padding-bottom: 5%;
   }
 `;
 

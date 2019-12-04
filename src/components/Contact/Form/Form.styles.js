@@ -50,7 +50,7 @@ export const FormInput = styled.input`
   background: transparent;
   border: none;
   border-bottom: 2px solid red;
-  height: 50px;
+  height: 30px;
   color: ${({ theme }) => theme.color.light};
 `;
 
