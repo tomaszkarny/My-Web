@@ -4,13 +4,20 @@ import { linkData } from 'components/Navigation/Link/linkData';
 
 import { useOnClickOutside } from 'utils/hooks';
 
-import { StyledNav, Logo } from 'components/Navigation/Navigation.styles';
+import {
+  Logo,
+  NavWrapper,
+  StyledNav,
+  StyledUl,
+  LogoAnchor,
+  StyledLi,
+} from 'components/Navigation/Navigation.styles';
 
 import { Burger } from 'components/Navigation/Burger/Burger';
 import { Link } from './Link/Link';
 
 export const Navigation = () => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const node = useRef();
 
   useOnClickOutside(node, () => setOpen(false));
@@ -25,30 +32,32 @@ export const Navigation = () => {
       behavior: 'smooth',
     });
 
-    setOpen(!open);
+    setOpen(!isOpen);
   };
 
+  const handleBurgerClick = () => setOpen(!isOpen);
+
   return (
-    <StyledNav ref={node}>
-      <nav>
-        <ul className={open ? 'active' : ''}>
+    <NavWrapper ref={node}>
+      <StyledNav>
+        <StyledUl isOpen={isOpen}>
           <Logo>
-            <a href="/">Tomasz Karny</a>
+            <LogoAnchor href="/">Tomasz Karny</LogoAnchor>
           </Logo>
-          <Burger open={open} setOpen={setOpen} />
+          <Burger isOpen={isOpen} onClick={handleBurgerClick} />
 
           {linkData.map(data => (
-            <li key={data.id}>
+            <StyledLi key={data.id}>
               <Link
                 text={data.text}
                 name={data.name}
                 href={data.href}
                 onClick={handleItemClick}
               />
-            </li>
+            </StyledLi>
           ))}
-        </ul>
-      </nav>
-    </StyledNav>
+        </StyledUl>
+      </StyledNav>
+    </NavWrapper>
   );
 };

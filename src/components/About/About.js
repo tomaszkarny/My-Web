@@ -9,6 +9,6 @@ import { aboutData } from './aboutData';
 export const About = ({ id }) => (
   <Section>
     <SectionCommon title={aboutData.title} text={aboutData.text} dark id={id} />
-    <Image image={aboutData.image} alt={aboutData.alt} />
+    <Image imageUrl={aboutData.image} alt={aboutData.alt} />
   </Section>
 );

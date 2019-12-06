@@ -8,7 +8,7 @@ import { hiringData } from 'components/Hiring/hiringData';
 
 export const Hiring = ({ id }) => (
   <Section>
-    <Image image={hiringData.image} alt={hiringData.alt} />
+    <Image imageUrl={hiringData.image} alt={hiringData.alt} />
     <SectionCommon
       title={hiringData.title}
       text={hiringData.text}

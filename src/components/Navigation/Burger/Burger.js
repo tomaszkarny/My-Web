@@ -2,9 +2,9 @@ import React from 'react';
 
 import { StyledBurger } from 'components/Navigation/Burger/Burger.styles';
 
-export const Burger = ({ open, setOpen }) => {
+export const Burger = ({ isOpen, onClick }) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger isOpen={isOpen} onClick={onClick}>
       <div />
       <div />
       <div />
