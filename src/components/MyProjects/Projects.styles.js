@@ -12,12 +12,13 @@ export const ProjectsHeader = styled.h1`
 
 export const ProjectsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: 200px;
-  padding-bottom: 30px;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  padding: 2rem;
 
   @media (max-width: 900px) {
-    grid-auto-rows: 200px;
+    grid-auto-rows: 350px;
   }
   @media (max-width: 400px) {
     grid-template-columns: 1fr;
@@ -30,10 +31,22 @@ export const ProjectsWrapper = styled.div`
 
 export const Item = styled.div`
   background: tomato;
-  width: 100%;
+  width: 300px;
+  height: 200px;
   background: transparent;
   text-align: left;
   padding: 0 10%;
+
+  border-radius: 20px;
+
+  &:hover {
+    background: linear-gradient(130deg, black 30%, grey 100%);
+    transition: 0.7s all ease-in-out;
+    h3,
+    p {
+      color: white;
+    }
+  }
 
   h3 {
     font-family: Montserrat;
@@ -60,4 +73,8 @@ export const Item = styled.div`
     text-align: left;
     word-break: break-all;
   }
+`;
+
+export const StyledHyperLink = styled.a`
+  text-decoration: none;
 `;

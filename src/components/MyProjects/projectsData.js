@@ -1,25 +1,18 @@
 import { faFile } from '@fortawesome/free-regular-svg-icons';
+import { faHammer } from '@fortawesome/free-solid-svg-icons';
 
 export const projectsData = [
   {
-    title: 'Consectetur vestibulum',
-    text: `Consectetur vestibulum maecenas curabitur hac felis vestibulum urna
-      velit parturient suspendisse a ad lacus mauris`,
-
+    title: 'Artistic Blacksmithing Website',
+    text: `Website made for Blacksmithing company`,
+    description: `Technologies: React / GatsbyJs`,
     color: '#c71222 ',
     size: '2x',
-    icon: faFile,
+    icon: faHammer,
+    href: 'https://kowalstwo-karny.netlify.app/',
   },
   {
-    title: 'Looking for Job',
-    text: `Consectetur vestibulum maecenas curabitur hac felis vestibulum urna
-      velit parturient suspendisse a ad lacus mauris`,
-    color: '#c71222 ',
-    size: '2x',
-    icon: faFile,
-  },
-  {
-    title: 'Looking for Job',
+    title: 'Another Project',
     text: `Consectetur vestibulum maecenas curabitur hac felis vestibulum urna
       velit parturient suspendisse a ad lacus mauris`,
     color: '#c71222 ',
@@ -27,7 +20,7 @@ export const projectsData = [
     icon: faFile,
   },
   {
-    title: 'Random Text',
+    title: 'Another Project',
     text: `Consectetur vestibulum maecenas curabitur hac felis vestibulum urna
       velit parturient suspendisse a ad lacus mauris`,
     color: '#c71222 ',
@@ -35,7 +28,7 @@ export const projectsData = [
     icon: faFile,
   },
   {
-    title: 'Another random title',
+    title: 'Another Project',
     text: `Consectetur vestibulum maecenas curabitur hac felis vestibulum urna
       velit parturient suspendisse a ad lacus mauris`,
     color: '#c71222 ',
@@ -43,7 +36,15 @@ export const projectsData = [
     icon: faFile,
   },
   {
-    title: 'Looking for Job',
+    title: 'Another Project',
+    text: `Consectetur vestibulum maecenas curabitur hac felis vestibulum urna
+      velit parturient suspendisse a ad lacus mauris`,
+    color: '#c71222 ',
+    size: '2x',
+    icon: faFile,
+  },
+  {
+    title: 'Another Project',
     text: `Consectetur vestibulum maecenas curabitur hac felis vestibulum urna
       velit parturient suspendisse a ad lacus mauris`,
     color: '#c71222 ',
