@@ -20,6 +20,7 @@ const TimeLineItem = ({ data }) => {
                 size={data.size}
                 style={{ color: 'black', background: 'white' }}
               />
+              <h5>{data.name}</h5>
             </li>
           </ul>
         </List>

@@ -8,6 +8,7 @@ export const TimeLineWrapper = styled.div`
   flex-flow: wrap;
   justify-content: flex-start;
   align-items: stretch;
+  padding: 40px 0;
 
   @media (max-width: 900px) {
     margin-top: 10%;

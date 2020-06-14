@@ -30,4 +30,12 @@ export const timelineData = [
     icon: faReact,
     size: '3x',
   },
+  {
+    date: '2020',
+    name: 'Gatsby',
+  },
+  {
+    date: '2020',
+    name: 'GraphQL',
+  },
 ];

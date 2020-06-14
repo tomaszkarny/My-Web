@@ -9,8 +9,9 @@ export const StyledImg = styled.img`
   max-width: 100%;
   height: 100%;
   width: 100%;
+  border-radius: ${({ isProjectSection }) => (isProjectSection ? '20px' : '0')};
 
   @media (max-width: 400px) {
-    min-height: 500px;
+    min-height: ${({ isProjectSection }) => (isProjectSection ? 0 : 500)};
   }
 `;
