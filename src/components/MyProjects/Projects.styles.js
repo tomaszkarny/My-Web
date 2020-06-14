@@ -15,7 +15,6 @@ export const ProjectsWrapper = styled.div`
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 300px;
-  padding: 2rem;
 
   @media (max-width: 900px) {
     grid-auto-rows: 350px;
