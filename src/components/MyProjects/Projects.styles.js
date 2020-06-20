@@ -31,20 +31,17 @@ export const ProjectsWrapper = styled.div`
 export const Item = styled.div`
   background: tomato;
   width: 300px;
-  height: 200px;
+  height: 250px;
   background: transparent;
   text-align: left;
-  padding: 0 10%;
+  padding: 20px 10%;
 
-  border-radius: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
-    background: linear-gradient(130deg, black 30%, grey 100%);
-    transition: 0.7s all ease-in-out;
-    h3,
-    p {
-      color: white;
-    }
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
   h3 {
@@ -75,5 +72,14 @@ export const Item = styled.div`
 `;
 
 export const StyledHyperLink = styled.a`
+  padding-top: 10px;
   text-decoration: none;
+  color: ${({ theme }) => theme.color.midGray};
+
+  &:hover {
+    transition: 0.5s all ease-in-out;
+    color: tomato;
+    /* border-bottom: ${({ isIcon }) => (isIcon ? '' : '1px solid white')}; */
+    width: auto;
+  }
 `;

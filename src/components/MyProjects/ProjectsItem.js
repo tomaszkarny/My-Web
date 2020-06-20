@@ -20,6 +20,16 @@ export const ProjectsItem = ({ data }) => {
           <h3>{data.title}</h3>
           <p>{data.text}</p>
           <p>{data.description}</p>
+
+          <StyledHyperLink href={data.href}>{data.linkText}</StyledHyperLink>
+          <StyledHyperLink href={data.Href} isIcon>
+            <FontAwesomeIcon
+              icon={data.Icon}
+              size={data.Size}
+              style={{ color: data.Color, marginLeft: '20px' }}
+            />
+          </StyledHyperLink>
+
           {/* <Image imageUrl={data.image} alt={data.alt} isProjectSection /> */}
         </Item>
       </StyledHyperLink>
