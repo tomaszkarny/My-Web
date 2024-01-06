@@ -1,4 +1,4 @@
 export const skillsData = {
   title: 'Skills',
-  text: `Technologies what I've learnd and currently using HTML5, CSS3, Javascript, React, Gatsby, GraphQL`,
+  text: `I have acquired skills in and currently utilize the following technologies: HTML5, CSS3, JavaScript, React, Gatsby, GraphQL, Next.js, Tailwind CSS, Adobe Photoshop, Adobe Illustrator, Figma, and Contentful.`,
 };

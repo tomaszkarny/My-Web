@@ -38,4 +38,13 @@ export const timelineData = [
     date: '2020',
     name: 'GraphQL',
   },
+
+  {
+    date: '2022',
+    name: 'Figma',
+  },
+  {
+    date: '2022',
+    name: 'NextJS',
+  },
 ];
